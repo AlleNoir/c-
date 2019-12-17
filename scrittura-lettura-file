@@ -1,0 +1,40 @@
+#include <iostream>
+#include <fstream> //header necessario per ofstream!
+using namespace std;
+int main() {
+ofstream f("file.txt"); //se il file non esiste lo crea, altrimenti lo sovrascrive!
+if(!f) {
+cout <<"Errore nella creazione del file!";
+return -1;
+}
+
+f << "ma quanto è bella padova" <<endl; //si può inserire qualsiasi cosa nello stream, stringhe
+
+
+f.close(); //chiudo il file
+cout<<"Scrittura avvenuta con successo!";
+
+return 0;
+}
+
+----------------------------
+#include <iostream>
+#include <fstream> //header necessario per ifstream!
+using namespace std;
+int main() {
+ifstream f("file.txt"); //nome del file da aprire, si può mettere anche il percorso (es C:\\file.txt)
+string s;
+if(!f) {
+cout<<"Il file non esiste!";
+return -1;
+}
+
+while(f.good()) //fino a quando c’è qualcosa da leggere ..
+{
+getline(f, s); //legge tutta la riga dal file e la mette nella variabile s
+cout<<s<<endl;
+}
+f.close(); //chiude il file
+
+return 0;
+}
