@@ -1,0 +1,44 @@
+#import <iostream>
+using namespace std;
+float imp;
+float risultato;
+int a;
+float b;
+float cambio(float tasso, float importo);
+
+float tasso1 = 1.1;
+float tasso2 = 0.9;
+float tasso3 = 10/11;
+float tasso4 = 10/9;
+	
+int main(){
+	a=1;
+	while(a == 1){
+		cout << "scegli:  \n1. Cambio DOLLARI in EURO \n2. Cambio EURO in DOLLARI\n3. Cambio EURO in STERLINE\n4. Cambio STERLINE in EURO\n5. Variazione tasso EUR/USD\n6. Variazione tasso EUR/GBP\n7. Uscita dal programma ";
+		cin >> a;
+		cout << "iserire importo";
+		if (a == 1){
+			cin >> imp;
+			b = cambio(tasso1,imp);
+			cout << b;
+		}
+		if (a == 2){
+			cin >> imp;
+			cambio(tasso2,imp);
+		}
+		if (a == 3){
+			cin >> imp;
+			cambio(tasso3,imp);
+		}
+		if (a == 4){
+			cin >> imp;
+			cambio(tasso4,imp); 
+		}
+	}
+
+}
+
+float cambio(float tasso, float importo){
+	importo = importo * tasso;
+	return importo;
+}
