@@ -1,0 +1,34 @@
+#include <assert.h>
+#include <stdio.h>
+
+int N;
+int max=0;
+int min=999;
+int main(){
+	freopen("./input/3","r",stdin);
+	freopen("./output/3","w",stdout);
+	int N;
+	assert(1==scanf("%d",&N));
+	int A[N];
+	for (int i = 0;i<N;i++){
+		assert(1 == scanf("%d",&A[i]));
+		
+	}
+	
+	int somma[N];
+	for (int i=0;i<N;i++){
+		if (A[i]%2 == 0){
+			somma[i] = A[i]/2;
+		}
+		else{
+			somma[i]=A[i]*2;
+		}
+		printf("%d ",somma[i]);
+	}
+
+
+
+
+
+ 
+}
