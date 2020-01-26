@@ -1,0 +1,34 @@
+#include <assert.h>
+#include <stdio.h>
+
+int N;
+int K;
+int main(){
+	freopen("./input.txt","r",stdin);
+	freopen("./output.txt","w",stdout);
+	int N;
+	int K;
+	assert(1==scanf("%d",&N));
+	assert(1==scanf("%d",&K));
+	int A[N];
+	for (int i = 0;i<N;i++){
+		assert(1 == scanf("%d",&A[i]));
+		
+	}
+	
+	long int somma=1;
+	for (int i=0;i<N;i++){
+		if (A[i] != 0){
+			if (A[i] != K){
+				somma=somma*A[i];
+			}
+		}
+}
+
+	
+
+
+
+	printf("%d\n",somma);
+	
+}
