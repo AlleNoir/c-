@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+void ins(int ve[]);
+
+
+int v[5];
+int temp=0;
+int main(){
+	ins(v);
+//visualizzazione maggiore e minore
+//	int min=100;
+//	int max=0;
+//	for(int i=0;i<5;i++){
+//		if (v[i]>max){
+//			max = v[i];
+//		}
+//		else if (v[i]<min){
+//			min = v[i];
+//		}
+//}
+//	cout << "il maggiore è " << max << "il minore è " << min; 
+		
+//ordinamento vettore		
+	for(int i=0; i<5-1; i++){
+		int minim = i;
+		for(int j=i+1; j<5; j++){
+			if(v[j] < v[minim]){
+			minim = j;
+			}
+    	}
+
+		temp=v[minim];
+		v[minim]=v[i];
+		v[i]=temp;
+}
+	for(int i = 0; i < 5; i++){
+		cout << v[i] <<"\n";
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+void ins(int ve[]){
+	int a;
+	int i = 0;
+	for(int i=0; i < 5; i++){
+		cout << "inserisci numero ";
+		cin >> a;
+		ve[i]=a;
+	}
+}
