@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+void leggi_vettore(int ve[]);
+void mag(int ve[]);
+void cerca(int ve[]);
+
+
+int v[5];
+
+
+
+
+
+
+
+//-----------------------------------------------------
+int main(){
+	leggi_vettore(v);
+	mag(v);
+	cerca(v);
+}
+//-----------------------------------------------------
+
+
+
+void leggi_vettore(int ve[]){
+	int a;
+	int i = 0;
+	for(int i=0; i < 5; i++){
+		cout << "inserisci numero " << "\n";
+		cin >> a;
+		ve[i]=a;
+	}
+}
+
+void mag(int ve[]){
+	int x=0;
+	int mag = -10;
+	for(int i=0; i < 5; i++){
+		if(v[i]>mag){
+			mag = v[i];
+		}
+		
+	}
+	for(int i=0; i < 5; i++){
+		if(v[i] = mag){
+			x = x + 1;
+		}
+
+	
+	cout << "il numero maggiore è" << mag << "\n";
+	if(x>1){
+		cout << "il maggiore non è univoco" << "\n";
+	}
+	else{
+		cout << "il maggiore è univoco" << "\n";
+	}
+}
+
+void cerca(int ve[]){
+	int p = 100;
+	while (p > 4){
+	cout << "inserire posizione da 0 a 4";
+	cin >> p;
+	}
+	cout << "il numero presente in quella posizione del vettore è " << ve[p] << "\n";
+}
